@@ -1,4 +1,4 @@
-# ☕ ONE - Oracle Next Education | Primeiros Passos em Java
+# 🔢 ONE - Oracle Next Education | Variáveis e Tipos de Dados em Java
 
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)](https://www.jetbrains.com/idea/)
@@ -11,110 +11,178 @@
 
 ## 📖 Sobre o Projeto
 
-Este repositório contém os **primeiros exercícios práticos em Java** desenvolvidos durante o programa **ONE - Oracle Next Education** em parceria com a **Alura**. Os exercícios são focados nos fundamentos da linguagem Java, incluindo:
+Este repositório contém **6 exercícios práticos** sobre **variáveis e tipos de dados em Java** desenvolvidos durante o programa **ONE - Oracle Next Education** em parceria com a **Alura**. Os exercícios são focados em conceitos fundamentais da linguagem, incluindo:
 
-- ☕ Sintaxe básica do Java
-- 🖥️ Uso do método `main`
-- 📝 Saída de dados com `System.out.println()`
-- 🧮 Operações matemáticas básicas
-- 🏗️ Estrutura de classes Java
-- 💻 Desenvolvimento no IntelliJ IDEA
+- 🔢 Tipos primitivos (int, double, char)
+- 📝 Tipos de referência (String)
+- 🔄 Conversão de tipos (Casting)
+- 🧮 Operações aritméticas
+- ➕ Concatenação de strings
+- 💾 Declaração e inicialização de variáveis
 
 ---
 
 ## 🎯 Exercícios Realizados
 
-### 👋 **Exercício 1: Cumprimento Personalizado**
-**Objetivo:** Criar uma classe `Perfil` que imprima uma mensagem de cumprimento
+### 📊 **Exercício 1: Cálculo de Média**
+**Objetivo:** Calcular a média de duas notas decimais e exibir o resultado
 
 ```java
-public class Perfil {
+public class Media {
     public static void main(String[] args) {
-        System.out.println("Olá, Flávio");
+        double nota1 = 8.0;
+        double nota2 = 7.0;
+        double media = (nota1 + nota2) / 2;
+        System.out.println("Media = " + media);
     }
 }
 ```
 
 **Saída:**
 ```
-Olá, Flávio
+Media = 7.5
 ```
+
+**Conceitos aplicados:**
+- Declaração de variáveis do tipo `double`
+- Operações aritméticas (soma e divisão)
+- Concatenação de strings com operador `+`
 
 ---
 
-### 💬 **Exercício 2: Múltiplas Mensagens**
-**Objetivo:** Adicionar uma segunda mensagem de cumprimento
+### 🔄 **Exercício 2: Casting de Tipos**
+**Objetivo:** Converter (casting) uma variável double para int
 
 ```java
-public class Perfil {
+public class Casting {
     public static void main(String[] args) {
-        System.out.println("Olá, Flávio");
-        System.out.println("Tudo bem?");
+        double numeroDouble = 8.0;
+        int numeroInt = 7;
+        numeroInt = (int) numeroDouble;
+        System.out.println("Casting de double para int: " + numeroInt);
     }
 }
 ```
 
 **Saída:**
 ```
-Olá, Flávio
-Tudo bem?
+Casting de double para int: 8
 ```
+
+**Conceitos aplicados:**
+- Declaração de variáveis `double` e `int`
+- Casting explícito com `(int)`
+- Perda de precisão na conversão (parte decimal é descartada)
 
 ---
 
-### 📚 **Exercício 3: Anotações de Estudo**
-**Objetivo:** Criar uma classe `Estudos` para documentar conceitos importantes
+### 🔤 **Exercício 3: Concatenação de Char e String**
+**Objetivo:** Declarar variáveis char e String e concatená-las em uma mensagem
 
 ```java
-public class Estudos {
+public class Main {
     public static void main(String[] args) {
-        System.out.println("JVM (Java Virtual Machine) - é a Máquina Virtual do Java responsável por executar o bytecode");
-        System.out.println("JRE (Java Runtime Environment) - Ambiente de Execução do Java que fornece as bibliotecas padrões do Java para o JDK compilar o seu código e para a JVM executar o seu program");
+        char letra = 'J';
+        String palavra = "ava";
+        String mensagem = "Juntando letra " + letra + " a palavra " + palavra + ". Formamos a palavra: " + letra + palavra;
+        System.out.println(mensagem);
     }
 }
 ```
 
 **Saída:**
 ```
-JVM (Java Virtual Machine) - é a Máquina Virtual do Java responsável por executar o bytecode
-JRE (Java Runtime Environment) - Ambiente de Execução do Java que fornece as bibliotecas padrões do Java para o JDK compilar o seu código e para a JVM executar o seu program
+Juntando letra J a palavra ava. Formamos a palavra: Java
 ```
+
+**Conceitos aplicados:**
+- Declaração de variável do tipo `char` (usa aspas simples)
+- Declaração de variável do tipo `String` (usa aspas duplas)
+- Concatenação múltipla com operador `+`
 
 ---
 
-### ➕ **Exercício 4: Operação de Soma**
-**Objetivo:** Criar uma classe `Soma` que calcule e imprima o resultado de uma adição
+### 🛒 **Exercício 4: Cálculo de Valor Total**
+**Objetivo:** Calcular o valor total multiplicando preço pela quantidade
 
 ```java
-public class Soma {
+public class Main {
     public static void main(String[] args) {
-        System.out.println(10+5);
+        double precoProduto = 29.90;
+        int quantidade = 10;
+        double valorTotal = precoProduto * quantidade;
+        System.out.println("O valor total é: " + valorTotal);
     }
 }
 ```
 
 **Saída:**
 ```
-15
+O valor total é: 299.0
 ```
+
+**Conceitos aplicados:**
+- Operação de multiplicação entre `double` e `int`
+- Promoção automática de tipo (int → double)
+- Cálculo de valores monetários
 
 ---
 
-### ➖ **Exercício 5: Operação de Subtração**
-**Objetivo:** Criar uma classe `Subtracao` que calcule e imprima o resultado de uma subtração
+### 💵 **Exercício 5: Conversão de Dólar para Real**
+**Objetivo:** Converter um valor em dólares para reais usando cotação fixa
 
 ```java
-public class Subtracao {
+public class Main {
     public static void main(String[] args) {
-        System.out.println(10-5);
+        double valorEmDolares = 25;
+        double valorDolar = 4.94;
+        double valorEmReal = valorEmDolares * valorDolar;
+        System.out.println("O valor em reais é: " + valorEmReal);
     }
 }
 ```
 
 **Saída:**
 ```
-5
+O valor em reais é: 123.5
 ```
+
+**Conceitos aplicados:**
+- Operações com números decimais
+- Conversão de moedas
+- Multiplicação de valores `double`
+
+---
+
+### 💰 **Exercício 6: Cálculo de Desconto**
+**Objetivo:** Calcular e aplicar desconto percentual ao preço original
+
+```java
+public class Main {
+    public static void main(String[] args){
+        double precoOriginal = 150.75;
+        double percentualDesconto = 20.0;
+        double valorDoDesconto = (percentualDesconto / 100) * precoOriginal;
+        double precoComDesconto = precoOriginal - valorDoDesconto;
+        System.out.println("Preço original: " + precoOriginal);
+        System.out.println("Valor do desconto: " + valorDoDesconto);
+        System.out.println("Preço com desconto: " + precoComDesconto);
+    }
+}
+```
+
+**Saída:**
+```
+Preço original: 150.75
+Valor do desconto: 30.15
+Preço com desconto: 120.6
+```
+
+**Conceitos aplicados:**
+- Cálculo de porcentagem
+- Múltiplas operações aritméticas
+- Formatação de saída com múltiplos `println()`
+- Subtração de valores
 
 ---
 
@@ -123,21 +191,18 @@ public class Subtracao {
 - **Java 17+** (ou superior)
 - **IntelliJ IDEA** (IDE)
 - **JDK (Java Development Kit)**
-- **JVM (Java Virtual Machine)**
+- **Tipos Primitivos e de Referência**
 
 ---
 
 ## 📁 Estrutura do Projeto
 
 ```
-📦 primeiros-passos-java/
-├── 📂 src/
-│   ├── ☕ Perfil.java        # Exercícios 1 e 2
-│   ├── 📚 Estudos.java       # Exercício 3
-│   ├── ➕ Soma.java          # Exercício 4
-│   └── ➖ Subtracao.java     # Exercício 5
-└── 📋 README.md              # Documentação do projeto
+📦 variaveis-tipos-java/
+└── 📋 README.md                   # Documentação dos exercícios
 ```
+
+**Nota:** Os exercícios foram desenvolvidos e testados localmente. Este repositório contém a documentação completa de cada exercício realizado.
 
 ---
 
@@ -148,28 +213,25 @@ public class Subtracao {
 - IntelliJ IDEA (ou outra IDE Java)
 - Variável de ambiente JAVA_HOME configurada
 
-### **Passos:**
+### **Para reproduzir os exercícios:**
 
-1. **Clone o repositório:**
+1. **Crie um novo projeto Java na sua IDE**
+
+2. **Copie o código de cada exercício:**
+   - Crie uma nova classe com o nome indicado (Media, Casting ou Main)
+   - Cole o código do exercício desejado
+   - Execute a classe
+
+3. **Ou compile e execute via terminal:**
    ```bash
-   git clone https://github.com/seu-usuario/primeiros-passos-java.git
-   ```
-
-2. **Abra o projeto no IntelliJ IDEA:**
-   - File → Open → Selecione a pasta do projeto
-
-3. **Execute cada classe individualmente:**
-   - Abra o arquivo `.java` desejado
-   - Clique com o botão direito no arquivo
-   - Selecione "Run 'NomeDaClasse.main()'"
-
-4. **Ou compile e execute via terminal:**
-   ```bash
+   # Exemplo para o exercício 1
+   # Salve o código em um arquivo Media.java
+   
    # Compilar
-   javac Perfil.java
+   javac Media.java
    
    # Executar
-   java Perfil
+   java Media
    ```
 
 ---
@@ -178,40 +240,71 @@ public class Subtracao {
 
 Durante o desenvolvimento destes exercícios, foram praticados os seguintes conceitos:
 
-- **Estrutura de Classe Java**: Declaração de classes com `public class`
-- **Método main**: Ponto de entrada da aplicação Java
-- **System.out.println()**: Saída de dados no console
-- **Operadores Aritméticos**: Uso de `+` e `-` para operações matemáticas
-- **Tipos de Dados**: Trabalho com números inteiros e strings
-- **Compilação**: Processo de transformação de código Java em bytecode
-- **JVM, JRE e JDK**: Compreensão da arquitetura Java
-- **Convenções de Nomenclatura**: PascalCase para nomes de classes
-- **Estrutura de Projeto**: Organização de arquivos `.java`
-- **IDE IntelliJ IDEA**: Familiarização com ambiente de desenvolvimento
+- **Tipos Primitivos**: Uso de `int`, `double` e `char`
+- **Tipos de Referência**: Trabalho com `String`
+- **Declaração de Variáveis**: Sintaxe `tipo nomeVariavel = valor;`
+- **Casting Explícito**: Conversão forçada de tipos com `(tipo)`
+- **Operadores Aritméticos**: Soma (`+`), divisão (`/`), multiplicação (`*`) e subtração (`-`)
+- **Concatenação**: União de strings com operador `+`
+- **Aspas Simples vs Duplas**: `'a'` para char, `"texto"` para String
+- **Perda de Precisão**: Entendimento de truncamento em casting
+- **Ordem de Precedência**: Operações matemáticas e concatenação
+- **Cálculos Percentuais**: Conversão e aplicação de porcentagens
+- **Operações Monetárias**: Trabalho com valores em dinheiro
+- **Múltiplas Saídas**: Uso sequencial de `println()` para formatação
+- **System.out.println()**: Saída formatada no console
 
 ---
 
-## 📝 Conceitos Importantes
+## 📝 Tipos de Dados em Java
 
-### ☕ **JVM (Java Virtual Machine)**
-Máquina Virtual do Java responsável por executar o bytecode e garantir a portabilidade do código Java entre diferentes plataformas.
+### 🔢 **Tipos Primitivos**
 
-### 📦 **JRE (Java Runtime Environment)**
-Ambiente de Execução do Java que fornece as bibliotecas padrões necessárias para executar aplicações Java.
+| Tipo    | Tamanho | Descrição                        | Exemplo        |
+|---------|---------|----------------------------------|----------------|
+| `byte`  | 8 bits  | Inteiro de -128 a 127            | `byte b = 10;` |
+| `short` | 16 bits | Inteiro de -32.768 a 32.767      | `short s = 1000;` |
+| `int`   | 32 bits | Inteiro de -2³¹ a 2³¹-1          | `int i = 100000;` |
+| `long`  | 64 bits | Inteiro de -2⁶³ a 2⁶³-1          | `long l = 100000L;` |
+| `float` | 32 bits | Decimal de precisão simples      | `float f = 3.14f;` |
+| `double`| 64 bits | Decimal de precisão dupla        | `double d = 3.14159;` |
+| `char`  | 16 bits | Caractere Unicode                | `char c = 'A';` |
+| `boolean`| 1 bit  | Verdadeiro ou falso              | `boolean b = true;` |
 
-### 🛠️ **JDK (Java Development Kit)**
-Kit de Desenvolvimento Java que inclui o compilador, ferramentas de desenvolvimento e a JRE para desenvolvimento completo de aplicações.
+### 📦 **Tipos de Referência**
+
+- **String**: Sequência de caracteres
+- **Arrays**: Coleções de elementos do mesmo tipo
+- **Classes**: Tipos personalizados definidos pelo programador
+
+---
+
+## ⚠️ Importante sobre Casting
+
+### **Casting Implícito (Widening)**
+Conversão automática de um tipo menor para um tipo maior:
+```java
+int i = 100;
+double d = i; // Automático, sem perda de dados
+```
+
+### **Casting Explícito (Narrowing)**
+Conversão manual de um tipo maior para um tipo menor:
+```java
+double d = 9.78;
+int i = (int) d; // Resultado: 9 (parte decimal é perdida)
+```
 
 ---
 
 ## 🔄 Possíveis Melhorias
 
-- Adicionar variáveis para armazenar valores
-- Implementar entrada de dados com `Scanner`
-- Criar métodos adicionais além do `main`
-- Adicionar comentários explicativos no código
-- Implementar mais operações matemáticas (multiplicação, divisão, módulo)
-- Usar variáveis para tornar o código mais dinâmico
+- Adicionar entrada de dados com `Scanner`
+- Implementar validação de valores
+- Criar métodos para reutilização de código
+- Adicionar tratamento de exceções
+- Implementar operações com mais tipos primitivos
+- Criar exemplos com conversão entre todos os tipos
 
 ---
 
@@ -244,9 +337,9 @@ Desenvolvido durante o programa **ONE - Oracle Next Education**
 - [Oracle Next Education](https://www.oracle.com/br/education/oracle-next-education/)
 - [Alura](https://www.alura.com.br/)
 - [Documentação Java - Oracle](https://docs.oracle.com/en/java/)
+- [Tipos Primitivos em Java](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
+- [Type Casting em Java](https://www.w3schools.com/java/java_type_casting.asp)
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
-- [Java Tutorial - W3Schools](https://www.w3schools.com/java/)
-- [Download JDK](https://www.oracle.com/java/technologies/downloads/)
 - [Curso de Java - Alura](https://cursos.alura.com.br/)
 
 ---
